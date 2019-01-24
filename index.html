@@ -41,6 +41,20 @@
             background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         }
+        #date{
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); 
+            color: #0A79DF;
+            padding: 7px;
+            border-right: 5px groove;
+            border-bottom: 5px groove;
+            border-radius: 10px;
+        }
+        #timer {
+            background-color: #fff;
+            padding: 5px;
+            color: #192A56;
+            border-radius: 5px;
+        }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
@@ -68,7 +82,7 @@ with blessings at the wedding of our lad and lass</p><br>
 <h1 class="g mb-0">S.Sriram Kumar</h1><br><br>
 <h4 class="mb-0 small-title">Mr. S.Selvam & Mrs S.Jamuna Selvam</h4><br>
 <h1 class=" mb-0">J.S. Subhashree</h1><br>
-<h2 class="mb-0">On 23 February 2019</h2><br>
+<h2 class="mb-0">On <span id="date">23 February 2019</span></h2><br>
 <h1 id="demo"></h1>
                 </div>
         </div>
@@ -137,17 +151,20 @@ with blessings at the wedding of our lad and lass</p><br>
                         <h4>Venue : Kongu Mahal (Sathya Sai Kalyana Mahal)</h4>
                         <h4>Bus stop : Velankanni</h4>
                         <h4>Bus route : Mettupalayam to Karamadai</h4>
+                        <h4><a href="tel:+919677502587">
+                                  <b>Call me</b>
+                            @ 9677502587</a> For Assistance</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2">
                     <div class="p-5">
-                     <div class="mapouter"><div class="gmap_canvas"><iframe width="400" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=sathya%20sai%20thirumana%20mahal%2C%20mettuplayam&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de">pure black</a></div><style>.mapouter{text-align:right;height:300px;width:400px;}.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:400px;}</style></div>
+                     <div class="mapouter"><div class="gmap_canvas"><iframe width="auto" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=sathya%20sai%20thirumana%20mahal%2C%20mettuplayam&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{text-align:right;height:140px;width:auto;}.gmap_canvas {overflow:hidden;background:none!important;height:180px;width:auto;}</style></div>
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-1 gmaps">
@@ -159,12 +176,30 @@ with blessings at the wedding of our lad and lass</p><br>
             </div>
         </div>
     </section>
+    <!-- Modal -->
+
+
+    <div class="modal hide fade" id="myModal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn">Close</a>
+    <a href="#" class="btn btn-primary">Save changes</a>
+  </div>
+</div>
+
+
     <footer class="py-5 bg-black">
         <div class="container">
             <p class="text-white m-0 small">Designed With ❤️ by <strong style="color: #e65c00;  /* fallback for old browsers */
 color: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
 color: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-">Shree Gowtham</strong></p>
+">V.S.Shree Gowtham</strong></p>
         </div>
     </footer>
     <script>
@@ -187,8 +222,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance %(1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = "Only " + days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s "+ "left for our new Life";
+  document.getElementById("demo").innerHTML = "Only <span id='timer'>" + days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s </span>"+ "left for our new Life";
     
   // If the count down is over, write some text 
   if (distance < 0) {
@@ -196,6 +231,11 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "Have Finished on 23 Feb 2019 with all your Blessings.";
   }
 }, 1000);
+</script>
+<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
 </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
