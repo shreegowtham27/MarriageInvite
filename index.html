@@ -73,7 +73,7 @@
             </div>
         </div>
     </nav>
-    <header class="masthead text-center text-white" id="home">
+    <header class="masthead text-center text-white" id="home" style="padding: 150px;">
         <div class="masthead-content">
             <div class="container">
                 <p class="masthead-subheading mb-0" style="font-size: 20px;">Request the pleasure of your company
@@ -123,7 +123,7 @@ with blessings at the wedding of our lad and lass</p><br>
                         
                         <div class="events">
                         <h4 class="text-center">Taste Our Food</h4>
-                        <p>"Do take part in out Reception Dinner"</p>
+                        <p>"Do take part in our Reception Dinner"</p>
                         <h5>Date : 23-02-2019  Dinner  @ 8.00 pm to 10.00 pm</h5>
                         </div>
                         <br>
@@ -131,7 +131,7 @@ with blessings at the wedding of our lad and lass</p><br>
                         <div class="events">
                         <h4 class="text-center">Wedding Rituals</h4>
                         <p>"Hold my hand and we are half way there,Hold my hand and I'll take you there".</p>
-                        <h5>Date : 23-02-2019 Timing 3.00 am to 4.00 am</h5>
+                        <h5>Date : 24-02-2019 Timing 3.00 am to 4.00 am</h5>
                         </div>
 
                     </div>
@@ -151,9 +151,14 @@ with blessings at the wedding of our lad and lass</p><br>
                         <h4>Venue : Kongu Mahal (Sathya Sai Kalyana Mahal)</h4>
                         <h4>Bus stop : Velankanni</h4>
                         <h4>Bus route : Mettupalayam to Karamadai</h4>
-                        <h4><a href="tel:+919677502587">
-                                  <b>Call me</b>
-                            @ 9677502587</a> For Assistance</h4>
+                        <h4>For Assistance :<br><a href="tel:+919677502587">
+                                  <b>Call Gowtham</b>
+                            @ 9677502587</a><br>
+                            <a href="tel:+919566398400">
+                                  <b>Call Arun</b>
+                            @ 9566398400</a>
+
+                        </h4>
                     </div>
                 </div>
             </div>
@@ -178,20 +183,34 @@ with blessings at the wedding of our lad and lass</p><br>
     </section>
     <!-- Modal -->
 
+    <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
-    <div class="modal hide fade" id="myModal">
-  <div class="modal-header">
-    <a class="close" data-dismiss="modal">×</a>
-    <h3>Modal header</h3>
-  </div>
-  <div class="modal-body">
-    <p>One fine body…</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#" class="btn">Close</a>
-    <a href="#" class="btn btn-primary">Save changes</a>
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" style="text-align: center;" >Download on app store</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-12"><img src="https://s12.postimg.org/fmzk1vsi5/phylo.png" class="img-responsive" /></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 col-xs-offset-2"><img src="https://s17.postimg.org/jjwynz1en/ios.png" class="img-responsive" /></div>
+          <div class="col-xs-4"><img src="https://s22.postimg.org/mj975ck6p/android.png" class="img-responsive" /></div>
+        </div>
+        
+      </div>
+      <!--<div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>-->
+    </div>
+
   </div>
 </div>
+
 
 
     <footer class="py-5 bg-black">
@@ -233,9 +252,18 @@ var x = setInterval(function() {
 }, 1000);
 </script>
 <script type="text/javascript">
-    $(window).on('load',function(){
-        $('#myModal').modal('show');
-    });
+    // A $( document ).ready() block.
+$( document ).ready(function() {
+  if (document.cookie.indexOf('visited=true') == -1){
+    // load the overlay
+    $('#myModal').modal({show:true});
+    
+    var year = 1000*60*60*24*365;
+    var expires = new Date((new Date()).valueOf() + year);
+    document.cookie = "visited=true;expires=" + expires.toUTCString();
+
+  }
+}); 
 </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
