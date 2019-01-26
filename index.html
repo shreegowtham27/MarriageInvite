@@ -16,10 +16,17 @@
         .small-title h6{
             font-size: 3px !important;
         }
+        header.masthead {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
         #demo {
-            background: #e52d27;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: #e52d27;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: #fd746c;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(left, #ff9068, #fd746c);
+            background: -o-linear-gradient(left, #ff9068, #fd746c);
+            background: linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
             padding: 10px;
         }
         .events-main{
@@ -55,13 +62,21 @@
             color: #192A56;
             border-radius: 5px;
         }
+        .modal{
+            /* background: -webkit-linear-gradient(360deg, #FD6F46 10%, #FB9832 360%); Chrome 10+, Saf5.1+ background: -moz-linear-gradient(360deg, #FD6F46 10%, #FB9832 360%); FF3.6+ background: linear-gradient(360deg, #FD6F46 10%, #FB9832 360%); */ /* W3C */ 
+
+            background: -webkit-linear-gradient(360deg, #99D22B 10%, #FBFF00 360%); /* Chrome 10+, Saf5.1+ */ background: -moz-linear-gradient(360deg, #99D22B 10%, #FBFF00 360%); /* FF3.6+ */ background: linear-gradient(360deg, #99D22B 10%, #FBFF00 360%); /* W3C */
+        }
+        .modal-dialog{
+            background-color: -webkit-linear-gradient(360deg,#949494 10%,#efefef 360%); background: linear-gradient(360deg,#949494 10%,#efefef 360%);
+        }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">3
         <div class="container"><a class="navbar-brand" href="#">Marriage Invitation</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto">
@@ -73,7 +88,7 @@
             </div>
         </div>
     </nav>
-    <header class="masthead text-center text-white" id="home" style="padding: 150px;">
+    <header class="masthead text-center text-white" id="home">
         <div class="masthead-content">
             <div class="container">
                 <p class="masthead-subheading mb-0" style="font-size: 20px;">Request the pleasure of your company
@@ -82,7 +97,7 @@ with blessings at the wedding of our lad and lass</p><br>
 <h1 class="g mb-0">S.Sriram Kumar</h1><br><br>
 <h4 class="mb-0 small-title">Mr. S.Selvam & Mrs S.Jamuna Selvam</h4><br>
 <h1 class=" mb-0">J.S. Subhashree</h1><br>
-<h2 class="mb-0">On <span id="date">23 February 2019</span></h2><br>
+<h2 class="mb-0">On <span id="date">23 February 2019</span></h2><br><br>
 <h1 id="demo"></h1>
                 </div>
         </div>
@@ -168,9 +183,10 @@ with blessings at the wedding of our lad and lass</p><br>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2">
-                    <div class="p-5">
-                     <div class="mapouter"><div class="gmap_canvas"><iframe width="auto" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=sathya%20sai%20thirumana%20mahal%2C%20mettuplayam&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{text-align:right;height:140px;width:auto;}.gmap_canvas {overflow:hidden;background:none!important;height:180px;width:auto;}</style></div>
+                     <div class="p-5">
+                     <div class="mapouter"><div class="gmap_canvas"><iframe width="auto" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=sathya%20sai%20thirumana%20mahal%2C%20mettuplayam&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{text-align:right;height:140px;width:500px;}.gmap_canvas {overflow:hidden;background:none!important;height:180px;width:auto;}</style></div>
                     </div>
+                   <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=sathya%20sai%20kalyana%20mahal%20mettupalayam&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.gmap_canvas {overflow:hidden;background:none!important;height:auto;width:auto;}</style></div> -->
                 </div>
                 <div class="col-lg-6 order-lg-1 gmaps">
                     <div class="p-5">
@@ -185,22 +201,27 @@ with blessings at the wedding of our lad and lass</p><br>
 
     <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->
-    <div class="modal-content">
+    <div class="modal-content container text-center">
       <div class="modal-header">
+        <h2 class="modal-title" style="text-align: center;" >Special Invite for a Special Person</h2>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title" style="text-align: center;" >Download on app store</h4>
       </div>
       <div class="modal-body">
         <div class="row">
-          <div class="col-lg-12"><img src="https://s12.postimg.org/fmzk1vsi5/phylo.png" class="img-responsive" /></div>
+          <div class="col-lg-12"><h2 style="color: #45CE30;"> Sri Ram  and Subhashree <br> together cardially Invites you.<h2> <h4>to be with us,
+as we celebrate our new life together.<br><br>
+please join our family and
+friends for our wedding Reception
+on Saturday, <span class="high"><strong style="color:#5acc32;">23-02-2019.</strong></span></h4></div>
         </div>
-        <div class="row">
+        
+        <!-- <div class="row">
           <div class="col-xs-4 col-xs-offset-2"><img src="https://s17.postimg.org/jjwynz1en/ios.png" class="img-responsive" /></div>
           <div class="col-xs-4"><img src="https://s22.postimg.org/mj975ck6p/android.png" class="img-responsive" /></div>
-        </div>
+        </div> -->
         
       </div>
       <!--<div class="modal-footer">
@@ -242,7 +263,7 @@ var x = setInterval(function() {
     
   // Output the result in an element with id="demo"
   document.getElementById("demo").innerHTML = "Only <span id='timer'>" + days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s </span>"+ "left for our new Life";
+  + minutes + "m " + seconds + "s </span>  "+ "      Left for our new Life";
     
   // If the count down is over, write some text 
   if (distance < 0) {
@@ -251,6 +272,8 @@ var x = setInterval(function() {
   }
 }, 1000);
 </script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     // A $( document ).ready() block.
 $( document ).ready(function() {
@@ -265,8 +288,6 @@ $( document ).ready(function() {
   }
 }); 
 </script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html
