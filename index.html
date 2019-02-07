@@ -12,7 +12,57 @@
     <!--[if IE]><link rel="shortcut icon" href="images/favicons/favicon.ico"><![endif]-->
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 23, 2019 00:42:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance %(1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = "Only <span id='timer'>" + days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s </span>  "+ "      Left for our new Life";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Have Finished on 23 Feb 2019 with all your Blessings.";
+  }
+}, 1000);
+</script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    // A $( document ).ready() block.
+$( document ).ready(function() {
+  if (document.cookie.indexOf('visited=true') == -1){
+    // load the overlay
+    $('#myModal').modal({show:true});
+    
+    var year = 1000*60*60*24*365;
+    var expires = new Date((new Date()).valueOf() + year);
+    document.cookie = "visited=true;expires=" + expires.toUTCString();
+
+  }
+}); 
+</script>
+
     <style type="text/css">
+        body{
+            background: linear-gradient(45deg, #f06, yellow);
+        }
         .small-title h6{
             font-size: 3px !important;
         }
@@ -55,11 +105,12 @@
             border-right: 5px groove;
             border-bottom: 5px groove;
             border-radius: 10px;
+            box-shadow:20px 20px 50px 10px yellow inset; 
         }
         #timer {
            /* background-color: #fff;
             padding: 5px;*/
-            color: #192A56;
+            color: #192A56; 
             /*border-radius: 5px;*/
         }
         .modal{
@@ -70,12 +121,15 @@
         .modal-dialog{
             background-color: -webkit-linear-gradient(360deg,#949494 10%,#efefef 360%); background: linear-gradient(360deg,#949494 10%,#efefef 360%);
         }
+        .section{
+            margin: 10% !important;
+        }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
 </head>
 
-<body>
+<body class="bodybg">
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
         <div class="container"><a class="navbar-brand" href="#">Marriage Invitation</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -137,7 +191,7 @@ with blessings at the wedding of our lad and lass</p><br>
                         <br>
                         
                         <div class="events">
-                        <h4 class="text-center">Taste Our Food</h4>
+                        <h4 class="text-center">Taste Our Delicious Food</h4>
                         <p>"Do take part in our Reception Dinner"</p>
                         <h5>Date : 23-02-2019  Dinner  @ 8.00 pm to 10.00 pm</h5>
                         </div>
@@ -155,7 +209,7 @@ with blessings at the wedding of our lad and lass</p><br>
         </div>
     </section>
     <section id="venue">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5"><img class="rounded-circle img-fluid" src="assets/img/gift1.png"></div>
@@ -180,11 +234,11 @@ with blessings at the wedding of our lad and lass</p><br>
         </div>
     </section>
     <section>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2">
                      <!-- <div class="p-5">-->
-                    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:auto;height:200px;"><div id="mymap-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=sathya+sai+thirumana+mandapam,+vip+nagar,+mettupalayam&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="embed-maphtml" href="https://www.embed-map.com" id="authorizemap-data">https://www.embed-map.com</a><style>#mymap-display img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
+                    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:auto;height:18rem;"><div id="mymap-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=sathya+sai+thirumana+mandapam,+vip+nagar,+mettupalayam&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="embed-maphtml" href="https://www.embed-map.com" id="authorizemap-data">https://www.embed-map.com</a><style>#mymap-display img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
                 </div>
                 <div class="col-lg-6 order-lg-1 gmaps">
                     <div class="p-5">
@@ -209,7 +263,7 @@ with blessings at the wedding of our lad and lass</p><br>
       </div>
       <div class="modal-body">
         <div class="row">
-          <div class="col-lg-12"><h2 style="color: #45CE30;"> Sri Ram  and Subhashree <br> together cardially Invites you.<h2> <h4>to be with us,
+          <div class="col-lg-12"><h2 style="color: #45CE30;"> Sri Ram  and Subhashree <br> In association with <strong style="text-shadow: hsl(80,90,120);">Shree Gowtham</strong> together cardially Invites you.<h2> <h4>to be with us,
 as we celebrate our new life together.<br><br>
 please join our family and
 friends for our wedding Reception
@@ -240,53 +294,6 @@ color: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefo
 ">V.S.Shree Gowtham</strong></p>
         </div>
     </footer>
-    <script>
-// Set the date we're counting down to
-var countDownDate = new Date("Feb 23, 2019 00:42:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance %(1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = "Only <span id='timer'>" + days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s </span>  "+ "      Left for our new Life";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Have Finished on 23 Feb 2019 with all your Blessings.";
-  }
-}, 1000);
-</script>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-    // A $( document ).ready() block.
-$( document ).ready(function() {
-  if (document.cookie.indexOf('visited=true') == -1){
-    // load the overlay
-    $('#myModal').modal({show:true});
-    
-    var year = 1000*60*60*24*365;
-    var expires = new Date((new Date()).valueOf() + year);
-    document.cookie = "visited=true;expires=" + expires.toUTCString();
-
-  }
-}); 
-</script>
-
 </body>
 
 </html
