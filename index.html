@@ -60,8 +60,10 @@ $( document ).ready(function() {
 </script>
 
     <style type="text/css">
-        body{
+        .bodybg{
             background: linear-gradient(45deg, #f06, yellow);
+            animation: pulse 5s infinite;
+            -webkit-animation: pulse 5s infinite;
         }
         .small-title h6{
             font-size: 3px !important;
@@ -78,9 +80,6 @@ $( document ).ready(function() {
             background: linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         
             padding: 10px;
-        }
-       .p-5 {
-            padding: 8rem 5.5rem !important;
         }
         .events-main{
             background: #e65c00;  /* fallback for old browsers */
@@ -130,6 +129,12 @@ $( document ).ready(function() {
         .modal-dialog{
             border:5px groove #0099cc;
             background-color: #bdc3c7;          
+        }
+        @keyframes pulse {
+          0%   {background-color: red;}
+          25%  {background-color: yellow;}
+          50%  {background-color: blue;}
+          100% {background-color: green;}
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
