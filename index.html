@@ -7,159 +7,225 @@
     <title>Home - Marriage Invitation</title>
     <meta name="description" content="You're Invited for making a wonderful start of Ours.">
     <!-- Favicon -->
-    <meta name="msapplication-TileImage" content="assets/imag/favicon.png"> <!-- Windows 8 -->
-    <meta name="msapplication-TileColor" content="#00CCFF"/> <!-- Windows 8 color -->
+    <meta name="msapplication-TileImage" content="assets/imag/favicon.png">
+    <!-- Windows 8 -->
+    <meta name="msapplication-TileColor" content="#00CCFF" />
+    <!-- Windows 8 color -->
     <!--[if IE]><link rel="shortcut icon" href="images/favicons/favicon.ico"><![endif]-->
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <script>
-// Set the date we're counting down to
-var countDownDate = new Date("Feb 23, 2019 00:42:25").getTime();
+    <!-- <link rel="stylesheet" href="assets/bootstrap/css/fontawesome.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Feb 24, 2019 05:30:25").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+        // Update the count down every 1 second
+        var x = setInterval(function() {
 
-  // Get todays date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance %(1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = "Only <span id='timer'>" + days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s </span>  "+ "      Left for our new Life";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Have Finished on 23 Feb 2019 with all your Blessings.";
-  }
-}, 1000);
-</script>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-    // A $( document ).ready() block.
-$( document ).ready(function() {
-  if (document.cookie.indexOf('visited=true') == -1){
-    // load the overlay
-    $('#myModal').modal({show:true});
-    
-    var year = 1000*60*60*24*365;
-    var expires = new Date((new Date()).valueOf() + year);
-    document.cookie = "visited=true;expires=" + expires.toUTCString();
+            // Get todays date and time
+            var now = new Date().getTime();
 
-  }
-}); 
-</script>
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = "Only <span id='timer'>" + days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s </span>  " + "      Left for our new Life";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "Have Finished on 23 Feb 2019 with all your Blessings.";
+            }
+        }, 1000);
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        // A $( document ).ready() block.
+        $(document).ready(function() {
+            if (document.cookie.indexOf('visited=true') == -1) {
+                // load the overlay
+                $('#myModal').modal({
+                    show: true
+                });
+
+                var year = 1000 * 60 * 60 * 24 * 365;
+                var expires = new Date((new Date()).valueOf() + year);
+                document.cookie = "visited=true;expires=" + expires.toUTCString();
+
+            }
+        });
+    </script>
 
     <style type="text/css">
-        .bodybg{
+        .bodybg {
             /*background: linear-gradient(45deg, #f06, yellow);*/
             animation: pulse 5s infinite;
             -webkit-animation: pulse 5s ease-in infinite;
         }
-        .small-title h6{
+        
+        .small-title h6 {
             font-size: 3px !important;
         }
+        
         header.masthead {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-}
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+        }
+        
         #demo {
-            background: #e52d27;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            background: #fd746c;  /* fallback for old browsers */
+            background: #e52d27;
+            /* fallback for old browsers */
+            /* Chrome 10-25, Safari 5.1-6 */
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: #fd746c;
+            /* fallback for old browsers */
             background: -webkit-linear-gradient(left, #ff9068, #fd746c);
             background: -o-linear-gradient(left, #ff9068, #fd746c);
-            background: linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+            background: linear-gradient(to right, #ff9068, #fd746c);
+            /* Chrome 10-25, Safari 5.1-6 */
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             padding: 10px;
         }
-        .events-main{
-            background: #e65c00;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        .events-main {
+            background: #e65c00;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #F9D423, #e65c00);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #F9D423, #e65c00);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         }
+        
         .events {
             padding: 10px;
             border-radius: 10px;
         }
-        .venue{
-            background: #2193b0;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        .events h5 span {
+            content: attr(data-text);
+            display: block;
+            color: #fff;
+            font-weight: 900;
+            line-height: 3.5rem;
         }
-        .gmaps{
-            background: #8E2DE2;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        .events h5 span::before {
+            content: attr(data-text);
+            background: #000;
+            padding: 1px 8px;
         }
-        #date{
-            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); 
+        
+        .venue {
+            background: #2193b0;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        
+        .gmaps {
+            background: #8E2DE2;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #4A00E0, #8E2DE2);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        
+        #date {
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
             color: #0A79DF;
             padding: 7px;
             border-right: 5px groove;
             border-bottom: 5px groove;
             border-radius: 10px;
-            box-shadow:20px 20px 50px 10px yellow inset; 
+            box-shadow: 20px 20px 50px 10px yellow inset;
         }
+        
         #timer {
-           /* background-color: #fff;
+            /* background-color: #fff;
             padding: 5px;*/
-            color: #192A56; 
+            color: #192A56;
             /*border-radius: 5px;*/
         }
-        .modal{
-            /* background: -webkit-linear-gradient(360deg, #FD6F46 10%, #FB9832 360%); Chrome 10+, Saf5.1+ background: -moz-linear-gradient(360deg, #FD6F46 10%, #FB9832 360%); FF3.6+ background: linear-gradient(360deg, #FD6F46 10%, #FB9832 360%); */ /* W3C */ 
-
-            background: -webkit-linear-gradient(360deg, #99D22B 10%, #FBFF00 360%); /* Chrome 10+, Saf5.1+ */ background: -moz-linear-gradient(360deg, #99D22B 10%, #FBFF00 360%); /* FF3.6+ */ background: linear-gradient(360deg, #99D22B 10%, #FBFF00 360%); /* W3C */
+        
+        .fa {
+            padding: 3px;
+            font-size: 25px;
         }
-        .modal-dialog{
-            background-color: -webkit-linear-gradient(360deg,#949494 10%,#efefef 360%); background: linear-gradient(360deg,#949494 10%,#efefef 360%);
+        
+        .modal {
+            /* background: -webkit-linear-gradient(360deg, #FD6F46 10%, #FB9832 360%); Chrome 10+, Saf5.1+ background: -moz-linear-gradient(360deg, #FD6F46 10%, #FB9832 360%); FF3.6+ background: linear-gradient(360deg, #FD6F46 10%, #FB9832 360%); */
+            /* W3C */
+            background: -webkit-linear-gradient(360deg, #99D22B 10%, #FBFF00 360%);
+            /* Chrome 10+, Saf5.1+ */
+            background: -moz-linear-gradient(360deg, #99D22B 10%, #FBFF00 360%);
+            /* FF3.6+ */
+            background: linear-gradient(360deg, #99D22B 10%, #FBFF00 360%);
+            /* W3C */
         }
-        .section{
+        
+        .modal-dialog {
+            background-color: -webkit-linear-gradient(360deg, #949494 10%, #efefef 360%);
+            background: linear-gradient(360deg, #949494 10%, #efefef 360%);
+        }
+        
+        .section {
             margin: 10% !important;
         }
-        .modal-dialog{
-            border:5px groove #0099cc;
-            background-color: #bdc3c7;          
+        
+        .modal-dialog {
+            border: 5px groove #0099cc;
+            background-color: #bdc3c7;
         }
-        .bg-circle{
+        
+        .bg-circle {
             animation: circlebg 2s ease-in infinite;
         }
+        
         @keyframes pulse {
-  0% {
-    background-color: #001F3F;
-  }
-  100% {
-    background-color: #FF4136;
-  }
-}
-@keyframes circlebg{
-    0% {
-        background:linear-gradient(0deg,#ee0979,#ff6a00)
-    }
-
-    30% {
-        background:linear-gradient(80deg,#ee0979,#e84118)
-    }
-    60% {
-        background:linear-gradient(150deg,#ee0979,#ff6a00)
-    }
-
-    80% {
-        background:linear-gradient(240deg,#d35400,#ff6a00)
-    }
-    100% {
-        background:linear-gradient(360deg,#ee0979,#27ae60)
-    }
-}
+            0% {
+                background-color: #001F3F;
+            }
+            100% {
+                background-color: #FF4136;
+            }
+        }
+        
+        @keyframes circlebg {
+            0% {
+                background: linear-gradient(0deg, #ee0979, #ff6a00)
+            }
+            30% {
+                background: linear-gradient(80deg, #ee0979, #e84118)
+            }
+            60% {
+                background: linear-gradient(150deg, #ee0979, #ff6a00)
+            }
+            80% {
+                background: linear-gradient(240deg, #d35400, #ff6a00)
+            }
+            100% {
+                background: linear-gradient(360deg, #ee0979, #27ae60)
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .p-5 {
+                text-align: left !important;
+                padding: 2rem 1rem;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
@@ -181,15 +247,14 @@ $( document ).ready(function() {
     <header class="masthead text-center text-white" id="home">
         <div class="masthead-content">
             <div class="container">
-                <p class="masthead-subheading mb-0" style="font-size: 20px;">Request the pleasure of your company
-with blessings at the wedding of our lad and lass</p><br>
+                <p class="masthead-subheading mb-0" style="font-size: 20px;">Request the pleasure of your company with blessings at the wedding of our lad and lass</p><br>
                 <h4 class="mb-0 small-title">Mr T.Srinivasan & Mrs.S.Devika Srinivasan</h4><br>
-<h1 class="g mb-0" style="color: #0be881; text-decoration:underline; font-weight: bolder;">S.Sriram Kumar</h1><br><br>
-<h4 class="mb-0 small-title">Mr. S.Selvam & Mrs S.Jamuna Selvam</h4><br>
-<h1 class=" mb-0" style="color: #0be881; text-decoration:underline; font-weight: bolder;">J.S. Subhashree</h1><br>
-<h2 class="mb-0">On <span id="date">23 February 2019</span></h2><br><br>
-<h1 id="demo"></h1>
-                </div>
+                <h1 class="g mb-0" style="color: #0be881; text-decoration:underline; font-weight: bolder;">S.Sriram Kumar</h1><br><br>
+                <h4 class="mb-0 small-title">Mr. S.Selvam & Mrs S.Jamuna Selvam</h4><br>
+                <h1 class=" mb-0" style="color: #0be881; text-decoration:underline; font-weight: bolder;">J.S. Subhashree</h1><br>
+                <h2 class="mb-0">On <br><span id="date">23 February 2019</span></h2><br><br>
+                <h1 id="demo"></h1>
+            </div>
         </div>
         <div class="bg-circle-1 bg-circle"></div>
         <div class="bg-circle-2 bg-circle"></div>
@@ -206,37 +271,37 @@ with blessings at the wedding of our lad and lass</p><br>
                     <div class="p-5 ">
                         <h2 class="display-4 text-center" style="text-decoration: underline;">Events</h2>
                         <div class="events">
-                        <h4 class="text-center">Marriage</h4>
-                        <p>"Two souls with a single thought Two hearts that beats as one"</p>
-                        <h5>Date : 24-02-2019 @ 4.30 am to 5.30 am</h5>
+                            <h4 class="text-center">Marriage</h4>
+                            <p>"Two souls with a single thought Two hearts that beats as one"</p>
+                            <h5>Date : 24-02-2019 <span data-text="@ 4.30 am to 5.30 am"></span></h5>
                         </div>
                         <br>
-                       
+
                         <div class="events">
-                        <h4 class="text-center">Welcoming the groom and his relatives</h4>
-                        <p>"I'm feeling alive and with every breath That I take,I feel like I 've won you my key to survival"</p>
-                        <h5>Date : 23-02-2019 @ 5.30 pm to 6.30 pm</h5>
+                            <h4 class="text-center">Welcoming the groom and his relatives</h4>
+                            <p>"I'm feeling alive and with every breath That I take,I feel like I 've won you my key to survival"</p>
+                            <h5>Date : 23-02-2019 <span data-text="@ 5.30 pm to 6.30 pm"></span></h5>
                         </div>
                         <br>
-                       
+
                         <div class="events">
-                        <h4 class="text-center">Reception</h4>
-                        <p>"A happy marriage is the union of two good forgivers"</p>
-                        <h5>Date : 23-02-2019 @ 7.00 pm to 10.00 pm</h5>
+                            <h4 class="text-center">Reception</h4>
+                            <p>"A happy marriage is the union of two good forgivers"</p>
+                            <h5>Date : 23-02-2019 <span data-text="@ 7.00 pm to 10.00 pm"></span></h5>
                         </div>
                         <br>
-                        
+
                         <div class="events">
-                        <h4 class="text-center">Taste Our Delicious Food</h4>
-                        <p>"Do take part in our Reception Dinner"</p>
-                        <h5>Date : 23-02-2019  Dinner  @ 8.00 pm to 10.00 pm</h5>
+                            <h4 class="text-center">Taste Our Delicious Food</h4>
+                            <p>"Do take part in our Reception Dinner"</p>
+                            <h5>Date : 23-02-2019 Dinner <span data-text="@ 8.00 pm to 10.00 pm"></span></h5>
                         </div>
                         <br>
-                        
+
                         <div class="events">
-                        <h4 class="text-center">Wedding Rituals</h4>
-                        <p>"Hold my hand and we are half way there,Hold my hand and I'll take you there".</p>
-                        <h5>Date : 24-02-2019 Timing 3.00 am to 4.00 am</h5>
+                            <h4 class="text-center">Wedding Rituals</h4>
+                            <p>"Hold my hand and we are half way there,Hold my hand and I'll take you there".</p>
+                            <h5>Date : 24-02-2019 <span data-text="@ 3.00 am to 4.00 am"></span></h5>
                         </div>
 
                     </div>
@@ -256,12 +321,11 @@ with blessings at the wedding of our lad and lass</p><br>
                         <h4>Venue : Kongu Mahal (Sathya Sai Kalyana Mahal)</h4>
                         <h4>Bus stop : Velankanni</h4>
                         <h4>Bus route : Mettupalayam to Karamadai</h4>
-                        <h4>For Assistance :<br><a href="tel:+919677502587">
-                                  <b>Call Gowtham</b>
-                            @ 9677502587</a><br>
+                        <h4>For Assistance :<br>
+                            <a href="tel:+919677502587">
+                                <b>Call Gowtham</b> @ 9677502587</a><br>
                             <a href="tel:+919566398400">
-                                  <b>Call Arun</b>
-                            @ 9566398400</a>
+                                <b>Call Arun</b> @ 9566398400</a>
 
                         </h4>
                     </div>
@@ -273,8 +337,21 @@ with blessings at the wedding of our lad and lass</p><br>
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2">
-                     <!-- <div class="p-5">-->
-                    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:auto;height:18rem;"><div id="mymap-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=sathya+sai+thirumana+mandapam,+vip+nagar,+mettupalayam&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="embed-maphtml" href="https://www.embed-map.com" id="authorizemap-data">https://www.embed-map.com</a><style>#mymap-display img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
+                    <!-- <div class="p-5">-->
+                    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:auto;height:18rem;">
+                        <div id="mymap-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=sathya+sai+thirumana+mandapam,+vip+nagar,+mettupalayam&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div>
+                        <a class="embed-maphtml" href="https://www.embed-map.com" id="authorizemap-data">https://www.embed-map.com</a>
+                        <style>
+                            #mymap-display img.text-marker {
+                                max-width: none!important;
+                                background: none!important;
+                            }
+                            
+                            img {
+                                max-width: none
+                            }
+                        </style>
+                    </div>
                 </div>
                 <div class="col-lg-6 order-lg-1 gmaps">
                     <div class="p-5">
@@ -288,49 +365,44 @@ with blessings at the wedding of our lad and lass</p><br>
     <!-- Modal -->
 
     <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-lg">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
 
-    <!-- Modal content-->
-    <div class="modal-content container text-center">
-      <div class="modal-header">
-        <h2 class="modal-title" style="text-align: center; color: #003171; text-decoration:underline;" >Special Invite for a Special Person</h2>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-lg-12">
-            <h4>In association with</h4><h2 style="color: #0099cc;">  <strong style="color: #FF6600;">Shree Gowtham,</strong> <br> Sri Ram  and Subhashree <br> together cardially <span style="text-decoration:underline;">Invites you</span><h2> <h4>to be with us,
-as we celebrate our new life together.<br><br>
-please join our family and
-friends for our wedding Reception
-on Saturday, <span class="high"><strong style="color:#5acc32; text-decoration:underline;">23-02-2019.</strong></span></h4></div>
+            <!-- Modal content-->
+            <div class="modal-content container text-center">
+                <div class="modal-header">
+                    <h2 class="modal-title" style="text-align: center; color: #003171; text-decoration:underline;">Special Invite for a Special Person</h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4>In association with</h4>
+                            <h2 style="color: #0099cc;"> <strong style="color: #FF6600;">Shree Gowtham,</strong> <br> Sri Ram and Subhashree <br> together cardially <span style="text-decoration:underline;">Invites you</span>
+                                <h2>
+                                    <h4>to be with us, as we celebrate our new life together.<br><br> please join our family and friends for our wedding Reception on Saturday, <span class="high"><strong style="color:#5acc32; text-decoration:underline;">23-02-2019.</strong></span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        
-        <!-- <div class="row">
-          <div class="col-xs-4 col-xs-offset-2"><img src="https://s17.postimg.org/jjwynz1en/ios.png" class="img-responsive" /></div>
-          <div class="col-xs-4"><img src="https://s22.postimg.org/mj975ck6p/android.png" class="img-responsive" /></div>
-        </div> -->
-        
-      </div>
-      <!--<div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>-->
     </div>
-
-  </div>
-</div>
 
 
 
     <footer class="py-5 bg-black">
-        <div class="container">
+        <div class="container" style="font-size: 20px; word-spacing: 2px;">
             <p class="text-white m-0 small">Designed With ❤️ by <strong style="color: #e65c00;  /* fallback for old browsers */
 color: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
 color: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-">V.S.Shree Gowtham</strong></p>
+">V.S.Shree Gowtham</strong>
+                <a href="mailto:shreegowtham027@gmail.com" target="_top"><i class="fa fa-envelope-square"></i></a>
+                <a href="https://in.linkedin.com/in/shreegowtham027" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="https://twitter.com/Shreegowtham027" target="_blank"><i class="fa fa-twitter-square"></i></a>
+            </p>
         </div>
     </footer>
 </body>
 
-</html
+</html>
